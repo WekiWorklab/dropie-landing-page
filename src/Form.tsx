@@ -9,9 +9,10 @@ import Input from "./Input";
 interface Props {
   open: boolean;
   setOpen: (open: boolean) => void;
+  email: string;
 }
 
-export default function Form({ open, setOpen }: Props) {
+export default function Form({ open, setOpen, email }: Props) {
   const [wait, setWait] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const validationSchema = Yup.object().shape({
@@ -23,6 +24,7 @@ export default function Form({ open, setOpen }: Props) {
   const { register, handleSubmit, reset, formState, setValue } = useForm(formOptions);
   const { errors } = formState;
 
+  setValue("email", email);
   const onSubmitForm = (data: any) => {
     setWait(1);
   };

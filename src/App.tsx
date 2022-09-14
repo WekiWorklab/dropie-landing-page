@@ -7,6 +7,7 @@ import React from "react";
 
 function App() {
   const [open, setOpen] = React.useState(false);
+  const [userEmail, setUserEmail] = React.useState("");
   const Features = [
     {
       title: "Drag and Drop",
@@ -42,7 +43,10 @@ function App() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(e.target);
+    const { email } = e.target as typeof e.target & {
+      email: { value: string };
+    };
+    setUserEmail(email.value);
     setOpen(true);
   };
   const handleChange = () => {
@@ -218,7 +222,7 @@ function App() {
       </section>
       <CTA setOpen={handleChange} />
       <Footer />
-      <Form open={open} setOpen={setOpen} />
+      <Form open={open} setOpen={setOpen} email={userEmail} />
     </div>
   );
 }
