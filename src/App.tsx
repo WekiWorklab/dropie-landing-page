@@ -43,10 +43,9 @@ function App() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const { email } = e.target as typeof e.target & {
-      email: { value: string };
-    };
-    setUserEmail(email.value);
+    let email = (e.target as HTMLFormElement).email.value;
+    setUserEmail(email);
+    // setUserEmail(email);
     setOpen(true);
   };
   const handleChange = () => {
@@ -111,6 +110,7 @@ function App() {
                 >
                   <input
                     type='email'
+                    name='email'
                     placeholder='Enter your email address'
                     autoComplete='off'
                     className='w-full p-2 md:px-5 md:py-3 text-gray-700 bg-white border border-gray-100 focus:outline-none focus:border-[#D93804] rounded-full'
