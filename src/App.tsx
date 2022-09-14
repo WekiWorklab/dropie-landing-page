@@ -93,7 +93,7 @@ function App() {
           <div className='flex flex-col  justify-center h-full px-10 md:px-20'>
             <h1 className='text-3xl lg:text-7xl font-bold  text-gray-900'>Your Riders</h1>
             <h1 className='text-3xl lg:text-7xl font-bold  text-gray-900'>Your Deliveries</h1>
-            <h1 className='text-3xl lg:text-7xl font-bold  text-gray-900'>Your are in Charge</h1>
+            <h1 className='text-3xl lg:text-7xl font-bold  text-gray-900'>You are in Charge</h1>
             <p className='text-sm lg:text-base mt-5 text-gray-600 md:pl-2'>
               Get delivery request, you manage your delivery, and see delivery payment in real time
             </p>
