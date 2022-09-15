@@ -60,7 +60,7 @@ export default function Form({ open, setOpen, email }: Props) {
             leaveFrom='opacity-100 translate-y-0 sm:scale-100'
             leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
           >
-            <div className='mt-[200px] md:mt-10 w-full flex md:max-w-[545px]  flex-col items-center  bg-white rounded-3xl px-8 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all '>
+            <div className='mt-[20px] md:mt-10 w-full flex md:max-w-[545px]  flex-col items-center  bg-white rounded-3xl px-8 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all '>
               {wait === 0 ? (
                 <div className='w-full flex justify-end text-cuddle-purple-500 text-heading-3 self-end cursor-pointer' onClick={() => setOpen(false)}>
                   <svg xmlns='http://www.w3.org/2000/svg' className='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor' strokeWidth='2'>
@@ -77,7 +77,7 @@ export default function Form({ open, setOpen, email }: Props) {
                     Want to get in touch? We&apos;d love to hear from you. Here is how you can reach us...
                   </p>
 
-                  <form onSubmit={handleSubmit(onSubmitForm)} className='max-w-xl w-full items-center justify-center'>
+                  <form onSubmit={handleSubmit(onSubmitForm)} className='max-w-xl w-full items-center justify-center '>
                     <div className='w-full mt-7  md:mt-8 max-w-[430px] items-center justify-center mx-auto'>
                       <div className=''>
                         <Input register={register} InputName='name' name='name' label='Name' type='text' placeholder='Name' containerStyle='w-full' />
@@ -96,13 +96,13 @@ export default function Form({ open, setOpen, email }: Props) {
                       <div className=''>
                         <Input register={register} InputName='email' name='email' label='Email Address' type='email' placeholder='Email Address' />
                       </div>
-                      <div className='w-full flex flex-col items-center'>
+                      <div className='w-full flex flex-col items-center mb-10'>
                         <button type='submit' className={buttonClass}>
                           Submit
                           {isLoading ? <Spinner /> : null}
                         </button>
                       </div>
-                      <div className='w-full flex justify-center md:justify-start text-cuddle-purple-500 '>
+                      <div className='w-full flex justify-center md:justify-start text-cuddle-purple-500'>
                         <div className='w-full py-[33px]  md:py-11 rounded-xl max-w-[545px] md:max-w-[613px] mb-[64px]'></div>
                       </div>
                     </div>
