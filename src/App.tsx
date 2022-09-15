@@ -92,7 +92,7 @@ function App() {
           </div>
         </div>
         <div className='mt-10 md:mt-0 w-full md:w-3/5 bg-[#fff] h-screen'>
-          <div className='flex flex-col  justify-center h-full px-10 md:px-20'>
+          <div className='flex flex-col md:justify-center h-full px-10 md:px-20'>
             <h1 className='text-3xl lg:text-7xl font-bold  text-gray-900'>Your Riders</h1>
             <h1 className='text-3xl lg:text-7xl font-bold  text-gray-900'>Your Deliveries</h1>
             <h1 className='text-3xl lg:text-7xl font-bold  text-gray-900'>You are in Charge</h1>
@@ -130,7 +130,7 @@ function App() {
 
       <section className='mt-28 md:mt-0 bg-conic-to-br from-white to-[#F97B04]' id='features'>
         <div className='py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6'>
-          <div className='w-full mb-8 lg:mb-16'>
+          <div className='w-full pt-10 md:pt-0 mb-8 lg:mb-16'>
             <h2 className='mb-4 text-4xl tracking-tight font-extrabold bg-conic-to-r from-black to-[#F97B04] text-center '>
               Designed for{" "}
               <span className='relative inline-block'>
