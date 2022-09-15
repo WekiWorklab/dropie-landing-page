@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import DropieImage from "./assets/dropie_screen.png";
+import DropieTracking from "./assets/track_packages.png";
 import { useSpring, animated } from "react-spring";
 import Form from "./Form";
 import React from "react";
@@ -298,7 +299,7 @@ function CTA({ setOpen }: CTAProps) {
           <div className='-mt-6 aspect-w-5 aspect-h-3 md:aspect-w-2 md:aspect-h-1'>
             <img
               className='transform translate-x-6 translate-y-6 rounded-md object-cover object-left-top sm:translate-x-16 lg:translate-y-20'
-              src='https://www.dropie.ng/static/media/dashboard.a06b4c9a.png'
+              src={DropieTracking}
               alt='App screenshot'
             />
           </div>
