@@ -28,7 +28,6 @@ export default function Form({ open, setOpen, email }: Props) {
   const onSubmitForm = (data: any) => {
     setWait(1);
     setIsLoading(true);
-
     fetch("https://apibeta.dropie.ng/save-leads", {
       method: "POST",
       headers: {
@@ -37,9 +36,9 @@ export default function Form({ open, setOpen, email }: Props) {
       body: JSON.stringify(data),
     }).then((res) => {
       if (res.status === 200) {
-        setWait(2);
         setIsLoading(false);
         reset();
+        window.location.href = "https://dropie.ng";
       }
     });
   };
