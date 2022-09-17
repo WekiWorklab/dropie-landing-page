@@ -27,6 +27,21 @@ export default function Form({ open, setOpen, email }: Props) {
   setValue("email", email);
   const onSubmitForm = (data: any) => {
     setWait(1);
+    setIsLoading(true);
+
+    fetch("https://apibeta.dropie.ng/save-leads", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) {
+        setWait(2);
+        setIsLoading(false);
+        reset();
+      }
+    });
   };
 
   let buttonClass = `flex gap-4 justify-center items-center rounded-lg bg-[#D93804] w-full py-3 px-5 md:py-4 md:px-6 text-sm md:text-base text-white font-GtWalsheimPro`;
