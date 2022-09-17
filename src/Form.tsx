@@ -26,7 +26,6 @@ export default function Form({ open, setOpen, email }: Props) {
 
   setValue("email", email);
   const onSubmitForm = (data: any) => {
-    setWait(1);
     setIsLoading(true);
     fetch("https://apibeta.dropie.ng/save-leads", {
       method: "POST",
